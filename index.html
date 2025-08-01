@@ -1,31 +1,64 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Landing Page</title>
-    <link href="./dist/output.css" rel="stylesheet">
-    <style>
-      /* Optional: Custom fonts */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 text-gray-800">
-    <div class="min-h-screen flex items-center justify-center p-8">
-      <div class="max-w-xl text-center">
-        <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-          Hello, world.
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8">
-          This is a minimal landing page built with Tailwind CSS. It's clean, simple, and ready to be customized.
-        </p>
-        <a href="#" class="bg-gray-800 text-white font-semibold py-3 px-6 rounded-full inline-block transition hover:bg-gray-700">
-          Get Started
-        </a>
+/landing-page
+├── index.html
+└── tailwind.css (หรือ CDN)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="p-6 bg-gray-100 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">MyLanding</h1>
+      <nav>
+        <a href="#features" class="ml-4 text-gray-600 hover:text-black">Features</a>
+        <a href="#contact" class="ml-4 text-gray-600 hover:text-black">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 bg-gradient-to-r from-blue-100 to-white">
+    <h2 class="text-4xl font-bold mb-4">Welcome to My Minimal Page</h2>
+    <p class="text-gray-600 mb-6 max-w-xl mx-auto">Simple, clean, and beautiful. Perfect for showcasing your product or idea.</p>
+    <a href="#features" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">Explore Features</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 px-6">
+    <div class="container mx-auto grid md:grid-cols-3 gap-8">
+      <div class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Fast</h3>
+        <p class="text-gray-600">Built for performance and speed with minimal code.</p>
+      </div>
+      <div class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Responsive</h3>
+        <p class="text-gray-600">Looks great on all screen sizes and devices.</p>
+      </div>
+      <div class="p-6 border rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Easy to Deploy</h3>
+        <p class="text-gray-600">Just upload to GitHub Pages and you’re live!</p>
       </div>
     </div>
-  </body>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-16 px-6">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-gray-600 mb-6">Email us at <a href="mailto:example@email.com" class="text-blue-500">example@email.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    © 2025 MyLanding. All rights reserved.
+  </footer>
+
+</body>
 </html>
